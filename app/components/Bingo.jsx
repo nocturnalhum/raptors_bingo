@@ -77,14 +77,13 @@ export default function Bingo() {
         }
       }
 
-      console.log('is new Bingo', isNewBingo);
       if (isNewBingo) {
         const timeoutId = setTimeout(() => {
           setBingo(true);
         }, 500);
         const timeoutSetFalse = setTimeout(() => {
           setBingo(false);
-        }, 3000);
+        }, 3500);
         setBingo;
         return () => {
           clearTimeout(timeoutId), clearTimeout(timeoutSetFalse);
@@ -102,7 +101,7 @@ export default function Bingo() {
         <div className='flex justify-center items-center h-1/6 landscape:h-full landscape:w-1/5 landscape:px-10'>
           <div className='flex flex-col-reverse justify-center items-center landscape:-rotate-90'>
             <div
-              className={`${chakra_petch.className} text-3xl md:text-4xl font-bold tracking-[0.2rem] uppercase whitespace-nowrap scale-y-[150%]`}
+              className={`${chakra_petch.className} text-3xl text-amber-100 md:text-4xl font-bold tracking-[0.2rem] uppercase whitespace-nowrap scale-y-[150%]`}
             >
               Toronto Raptors
             </div>
@@ -132,7 +131,7 @@ export default function Bingo() {
         </div>
         <div className='flex justify-center items-center my-8 landscape:h-full landscape:w-1/6'>
           <div
-            className={`${chakra_petch.className} text-4xl md:text-5xl font-bold tracking-widest uppercase whitespace-nowrap landscape:rotate-90`}
+            className={`${chakra_petch.className} text-4xl text-amber-200 md:text-5xl font-bold tracking-widest uppercase whitespace-nowrap landscape:rotate-90`}
           >
             Bingo
           </div>

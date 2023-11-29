@@ -15,7 +15,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
   };
 
   return (
-    <div className='flex justify-center items-center h-full w-full text-xs md:text-sm text-center rounded-lg group perspective'>
+    <div className='flex justify-center items-center h-full w-full font-semibold text-xs md:text-sm text-center rounded-lg group perspective'>
       <div
         onClick={handleFlip}
         className={`h-full w-full flex justify-end ${
@@ -27,12 +27,12 @@ export default function Card({ card, index, bingo, onItemClick }) {
             flip && 'rotate-y-180'
           }`}
         >
-          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 border-r-slate-700 border-b-slate-900 bg-slate-600/40 text-slate-950 rounded-md p-1'>
+          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 border-r-slate-700 border-b-slate-900 text-white bg-purple-500 rounded-md p-1'>
             {card.textFront}
           </div>
-          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 z-40 border-r-slate-700 border-b-slate-900 bg-gradient-to-br from-yellow-400 via-amber-600 to-amber-800 rounded-md rotate-y-180 backface-hidden'>
+          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 z-40 border-r-slate-700 border-b-slate-900 bg-gradient-to-bl from-red-400 via-red-500 to-rose-800 rounded-md rotate-y-180 backface-hidden'>
             <div
-              className={`flex items-center justify-center h-full w-full p-1 bg-green-600 md:p-0`}
+              className={`flex items-center justify-center h-full w-full p-1 md:p-0`}
             >
               <Image
                 src={card.imageBack}
@@ -43,7 +43,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
               />
               {index === 12 && (
                 <div className='absolute flex items-center text-3xl md:text-3xl font-bold text-amber-100 -rotate-45'>
-                  FREE
+                  {card.textFront}
                 </div>
               )}
             </div>
