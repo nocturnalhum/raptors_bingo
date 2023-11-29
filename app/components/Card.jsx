@@ -6,7 +6,6 @@ import Image from 'next/image';
 export default function Card({ card, index, bingo, onItemClick }) {
   const [flip, setFlip] = useState(card.id === 12);
   const handleFlip = () => {
-    console.log('clicked');
     onItemClick(index);
 
     if (card.id !== 12) {
