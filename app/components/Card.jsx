@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-export default function Card({ card, index, marked, onItemClick }) {
+export default function Card({ card, index, bingo, onItemClick }) {
   const [flip, setFlip] = useState(card.id === 12);
   const handleFlip = () => {
     console.log('clicked');
@@ -32,7 +32,9 @@ export default function Card({ card, index, marked, onItemClick }) {
           </div>
           <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 border-r-slate-700 border-b-slate-900 bg-gradient-to-br from-yellow-400 via-amber-600 to-amber-800 rounded-md rotate-y-180 backface-hidden'>
             <div
-              className={`flex items-center justify-center h-full w-auto p-1 md:p-0`}
+              className={`flex items-center justify-center h-full w-auto p-1 md:p-0 ${
+                bingo && 'animate-spin'
+              }`}
             >
               <Image
                 src={card.imageBack}

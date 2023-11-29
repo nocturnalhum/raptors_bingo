@@ -81,10 +81,14 @@ export default function Bingo() {
       if (isNewBingo) {
         const timeoutId = setTimeout(() => {
           setBingo(true);
-          alert('Bingo! You are the winner!');
-          setBingo(false); // Reset Bingo state for a new game
         }, 500);
-        return () => clearTimeout(timeoutId);
+        const timeoutSetFalse = setTimeout(() => {
+          setBingo(false);
+        }, 3000);
+        setBingo;
+        return () => {
+          clearTimeout(timeoutId), clearTimeout(timeoutSetFalse);
+        };
       }
     };
 
@@ -120,6 +124,7 @@ export default function Bingo() {
                   index={index}
                   marked={markedItems.has(index)}
                   onItemClick={() => handleItemClick(index)}
+                  bingo={bingo}
                 />
               </div>
             ))}
