@@ -99,7 +99,7 @@ export default function Bingo() {
   return (
     <div className='flex h-[100svh] w-full bg-gradient-to-b from-red-500 via-purple-600 to-black select-none overflow-hidden'>
       <div className='flex portrait:flex-col landscape:flex-row h-full w-full max-w-7xl mx-auto'>
-        <div className='flex justify-center items-center h-2/6 landscape:h-full landscape:w-1/5 landscape:px-10'>
+        <div className='flex justify-center items-center h-1/6 landscape:h-full landscape:w-1/5 landscape:px-10'>
           <div className='flex flex-col-reverse justify-center items-center landscape:-rotate-90'>
             <div
               className={`${chakra_petch.className} text-3xl md:text-4xl font-bold tracking-[0.2rem] uppercase whitespace-nowrap scale-y-[150%]`}
@@ -115,7 +115,7 @@ export default function Bingo() {
             />
           </div>
         </div>
-        <div className='flex items-center p-2 h-3/6 w-full landscape:h-full landscape:w-3/5'>
+        <div className='flex items-center p-2 h-4/6 w-full max-h-[100svw] landscape:h-full landscape:w-3/5'>
           <div className='grid h-full w-full md:max-h-[700px] max-w-5xl grid-cols-5 grid-rows-5 gap-2'>
             {cardDeck?.map((card, index) => (
               <div key={card.id}>
