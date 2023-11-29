@@ -97,7 +97,7 @@ export default function Bingo() {
   }, [markedItems, achievedCombos]);
 
   return (
-    <div className='flex h-screen w-full bg-gradient-to-b from-red-500 via-purple-600 to-black select-none'>
+    <div className='flex h-[100svh] w-full bg-gradient-to-b from-red-500 via-purple-600 to-black select-none overflow-hidden'>
       <div className='flex portrait:flex-col landscape:flex-row h-full w-full max-w-7xl mx-auto'>
         <div className='flex justify-center items-center h-2/6 landscape:h-full landscape:w-1/5 landscape:px-10'>
           <div className='flex flex-col-reverse justify-center items-center landscape:-rotate-90'>

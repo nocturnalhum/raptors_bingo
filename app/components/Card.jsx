@@ -39,7 +39,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
                 alt={card.player}
                 height={65}
                 width={65}
-                className={`w-auto h-full ${bingo && 'animate-spin'}`}
+                className={`w-auto h-full`}
               />
               {index === 12 && (
                 <div className='absolute flex items-center text-3xl md:text-3xl font-bold text-amber-100 -rotate-45'>
