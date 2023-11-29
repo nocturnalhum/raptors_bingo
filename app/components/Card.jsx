@@ -32,7 +32,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
           </div>
           <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 z-40 border-r-slate-700 border-b-slate-900 bg-gradient-to-br from-yellow-400 via-amber-600 to-amber-800 rounded-md rotate-y-180 backface-hidden'>
             <div
-              className={`flex items-center justify-center h-full w-auto p-1 md:p-0`}
+              className={`flex items-center justify-center h-full w-full p-1 bg-green-600 md:p-0`}
             >
               <Image
                 src={card.imageBack}
