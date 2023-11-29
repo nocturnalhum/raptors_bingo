@@ -30,7 +30,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
           <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 border-r-slate-700 border-b-slate-900 bg-slate-600/40 text-slate-950 rounded-md p-1'>
             {card.textFront}
           </div>
-          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 border-r-slate-700 border-b-slate-900 bg-gradient-to-br from-yellow-400 via-amber-600 to-amber-800 rounded-md rotate-y-180 backface-hidden'>
+          <div className='absolute inset-0 flex items-center justify-center border border-l-slate-200 z-40 border-r-slate-700 border-b-slate-900 bg-gradient-to-br from-yellow-400 via-amber-600 to-amber-800 rounded-md rotate-y-180 backface-hidden'>
             <div
               className={`flex items-center justify-center h-full w-auto p-1 md:p-0`}
             >
@@ -39,7 +39,7 @@ export default function Card({ card, index, bingo, onItemClick }) {
                 alt={card.player}
                 height={65}
                 width={65}
-                className={`w-auto h-full`}
+                className={`w-auto h-full ${bingo && 'animate-spin'}`}
               />
               {index === 12 && (
                 <div className='absolute flex items-center text-3xl md:text-3xl font-bold text-amber-100 -rotate-45'>
